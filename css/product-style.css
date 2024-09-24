@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #c72092, #6c14d0);
+    border-radius: 10px;
+}
+
+nav {
+    position: fixed;
+    z-index: 88;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3px;
+    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    top: -3px;
+    background-color: white;
+}
+
+.ulForNav {
+    align-self: end;
+    /* margin-bottom: 0px; */
+    display: flex;
+    justify-content: center;
+}
+
+.ulForNav li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.active {
+    color: #c72092 !important;
+    position: relative;
+}
+
+.active::before {
+    content: "_________";
+    position: absolute;
+    text-decoration: underline;
+    color: #c72092;
+    top: 10px;
+    left: -2px;
+}
+
+.ulForNav li a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.ulForI {
+    /* align-self: end; */
+    margin-bottom: 0px;
+}
+
+.ulForI li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.ulForI li svg {
+    font-size: 20px;
+}
+
+nav h1 {
+    color: rgb(199, 32, 146);
+    font-weight: bold;
+}
+
+nav h1 span {
+    color: #6c14d0;
+    text-decoration: underline;
+}
+
+nav li:hover {
+    color: #6c14d0;
+    cursor: pointer;
+}
+
+
+/**/
+
+
+.title {
+    width: 100%;
+    display: flex;
+    height: 200px;
+    background-color: rgba(11, 8, 8, 0.811);
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+.title h1{
+      background: linear-gradient(to right, #6c14d0,#c72092);
+      background-clip: text;
+      color: transparent;
+      background-color: transparent;
+      width: 100%;
+      margin: 100px 0px;
+      padding: 0px;
+      position: absolute;
+      left:0;
+      animation-name: lights;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+}
+@keyframes lights{
+   from{
+    transform: translate(0px);
+   }
+   to{
+   transform: translate(100%);
+   }
+}
+
+
+.content {
+    width: 80%;
+}
+
+.content .item {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 450px;
+    margin: 20px;
+    background-color: #eee;
+    box-shadow: 0px 0px 10px 3px #c72092;
+}
+
+.content .item img {
+    transition: all .5s;
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.content .item:hover img {
+    width: 175px;
+    height: 175px;
+}
+.content .item:hover .icon1 ,.content .item:hover .icon2{
+   opacity: 1;
+   left: 20px;
+   cursor: pointer;
+}
+
+
+
+.content .item p {
+    width: 200px;
+    color: #6b6767de;
+}
+
+.stars {
+    color: orange;
+}
+
+.add a {
+    background: linear-gradient(to right, #6c14d0, #c72092);
+    color: white;
+    text-decoration: none;
+}
+
+.contain ul li a:hover{
+color: #6c14d0 !important;
+}
+
+.icon1,
+.icon2 {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    border: 2px solid #6b6767de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity .5s , left .5s;
+
+}
+
+.icon1 {
+    top: 10px;
+    left: 0;
+}
+
+.icon2 {
+    top: 70px;
+    left: 0;
+}
+
+.icon1:hover , .icon2:hover{
+    color: #c72092;
+}
+.icon1 i{
+font-size: 25px;
+}
+.icon2 i{
+font-size: 25px;
+}
+
+.review{
+    width: 100%;
+    margin:100px 0px 0px 0px;
+    text-align: center;
+}
+.review h1{
+text-transform: uppercase;
+font-size: 60px;
+font-weight: bold;
+}
+.review h1 span{
+    background:linear-gradient(to right, #6c14d0, #c72092);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.review table img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.review table td{
+width: 10px;
+}
+
+.review table th, .review table td{
+    border: 1px solid #eee;
+}
+.review .like{
+    color: orange;
+    padding: 0px;
+}
+
+img{
+    transition: all .5s;
+}
+
+.review table img:hover{
+    width: 80px;
+    height: 80px;
+}
+
+.Rcontent{
+   background:  linear-gradient(to right, #6c14d0, #c72092);
+   color: white;
+}
+.review table th{
+    background-color: black;
+}
+.review table td{
+    background-color: #484848e1;
+}
