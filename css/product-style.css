@@ -96,17 +96,18 @@ nav li:hover {
 
 
 .menu {
-    background-color: #7d7d7d;
-    width: 50px;
-    height: 50px;
+    background-color: #ddd;
+    width: 45px;
+    height: 39px;
     border-radius: 5px;
     display: none;
+    border: 1px solid;
 }
 
 .menu span {
     display: block;
     line-height: .6;
-    font-weight: bold;
+    font-weight: bold !important;
     font-size: 20px;
 }
 
@@ -116,7 +117,10 @@ nav li:hover {
     height: 100%;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    top: -9px;
 }
+
 
 .menu:hover {
     border: 2px solid #6c14d0;
@@ -142,7 +146,6 @@ nav li:hover {
     width: 100%;
     text-align: center;
 }
-
 .menu ul li a{
 text-decoration: none;
 }
@@ -182,13 +185,13 @@ text-decoration: none;
     width: 100%;
     display: flex;
     height: 200px;
-    background-color: rgba(11, 8, 8, 0.811);
+    background-color: rgba(11, 8, 8, 0.502);
     color: transparent;
     position: relative;
     overflow: hidden;
 }
 .title h1{
-      background: linear-gradient(to right, #6c14d0,#c72092);
+      background: linear-gradient(to right, #8135d8,#f03eb8);
       background-clip: text;
       color: transparent;
       background-color: transparent;
@@ -201,10 +204,11 @@ text-decoration: none;
       animation-duration: 3s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
+      text-transform: uppercase;
 }
 @keyframes lights{
    from{
-    transform: translate(0px);
+    transform: translate(-50px);
    }
    to{
    transform: translate(100%);
